@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            margin-bottom: 16px;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            margin-right: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"] {
+            display: none;
+        }
+
+        .radio-group input[type="radio"]:checked + label {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 44px; /* Tăng kích thước nút */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block; /* Đảm bảo nút hiển thị đầy đủ chiều ngang của form */
+            margin: 0 auto; /* Đưa nút vào giữa form */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Heart Disease Prediction</h2>
+    <form action="/result" method="post">
+        <label for="age">Age:</label>
+        <input type="text" name="age" required><br>
+
+        <div class="radio-group">
+            <label for="anaemia">Anaemia:</label>
+            <input type="radio" name="anaemia" value="1" id="anaemia-yes" required>
+            <label for="anaemia-yes">Yes</label>
+
+            <input type="radio" name="anaemia" value="0" id="anaemia-no" required>
+            <label for="anaemia-no">No</label>
+        </div>
+
+        <label for="creatinine_phosphokinase">Creatinine Phosphokinase:</label>
+        <input type="text" name="creatinine_phosphokinase" required><br>
+
+        <div class="radio-group">
+            <label for="diabetes">Diabetes:</label>
+            <input type="radio" name="diabetes" value="1" id="diabetes-yes" required>
+            <label for="diabetes-yes">Yes</label>
+
+            <input type="radio" name="diabetes" value="0" id="diabetes-no" required>
+            <label for="diabetes-no">No</label>
+        </div>
+
+        <label for="ejection_fraction">Ejection Fraction:</label>
+        <input type="text" name="ejection_fraction" required><br>
+
+        <div class="radio-group">
+            <label for="high_blood_pressure">High Blood Pressure:</label>
+            <input type="radio" name="high_blood_pressure" value="1" id="high_blood_pressure-yes" required>
+            <label for="high_blood_pressure-yes">Yes</label>
+
+            <input type="radio" name="high_blood_pressure" value="0" id="high_blood_pressure-no" required>
+            <label for="high_blood_pressure-no">No</label>
+        </div>
+
+        <label for="platelets">Platelets:</label>
+        <input type="text" name="platelets" required><br>
+
+        <label for="serum_creatinine">Serum Creatinine:</label>
+        <input type="text" name="serum_creatinine" required><br>
+
+        <label for="serum_sodium">Serum Sodium:</label>
+        <input type="text" name="serum_sodium" required><br>
+
+        <div class="radio-group">
+            <label for="sex">Sex:</label>
+            <input type="radio" name="sex" value="0" id="female" required>
+            <label for="female">Female</label>
+
+            <input type="radio" name="sex" value="1" id="male" required>
+            <label for="male">Male</label>
+        </div>
+
+        <div class="radio-group">
+            <label for="smoking">Smoking:</label>
+            <input type="radio" name="smoking" value="1" id="smoking-yes" required>
+            <label for="smoking-yes">Yes</label>
+
+            <input type="radio" name="smoking" value="0" id="smoking-no" required>
+            <label for="smoking-no">No</label>
+        </div>
+
+        <label for="time">Time:</label>
+        <input type="text" name="time" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <footer>
+        &copy; 2024 Dissertation
+    </footer>
+</body>
+
+</html>
